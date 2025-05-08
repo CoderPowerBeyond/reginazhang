@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tian Qiu - Personal Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f9fa;
+            color: #222;
+        }
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            background: #fff;
+            width: 270px;
+            min-width: 220px;
+            max-width: 320px;
+            box-shadow: 2px 0 12px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 36px 18px 24px 18px;
+        }
+        .sidebar .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e3e7ea;
+            margin-bottom: 18px;
+        }
+        .sidebar .name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .sidebar .affiliation {
+            color: #2a5d9f;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .sidebar .location {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .sidebar .contact {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .sidebar .contact a {
+            color: #2a5d9f;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .sidebar .links {
+            margin: 18px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .sidebar .links a {
+            display: flex;
+            align-items: center;
+            color: #4285F4;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+        .sidebar .links a:hover {
+            color: #17406a;
+        }
+        .sidebar .links svg {
+            margin-right: 7px;
+        }
+        .sidebar nav {
+            margin-top: 30px;
+            width: 100%;
+        }
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar nav li {
+            margin: 12px 0;
+        }
+        .sidebar nav a {
+            color: #222;
+            text-decoration: none;
+            font-size: 1.08rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .sidebar nav a:hover {
+            color: #2a5d9f;
+        }
+        .main-content {
+            flex: 1;
+            padding: 48px 36px 36px 36px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .main-content section {
+            margin-bottom: 40px;
+        }
+        .main-content h2 {
+            color: #2a5d9f;
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            border-left: 4px solid #2a5d9f;
+            padding-left: 10px;
+        }
+        .main-content ul, .main-content ol {
+            margin: 0 0 0 20px;
+        }
+        .pub-title { font-weight: 600; }
+        .pub-authors { font-style: italic; color: #444; }
+        .pub-venue { color: #2a5d9f; }
+        @media (max-width: 900px) {
+            .layout { flex-direction: column; }
+            .sidebar { width: 100%; max-width: none; min-width: 0; flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 18px 10px; }
+            .sidebar nav { margin-top: 10px; }
+            .main-content { padding: 24px 8px; }
+            .sidebar .profile-pic { width: 120px; height: 120px; }
+        }
+        @media (max-width: 600px) {
+            .main-content { padding: 10px 2px; }
+            .sidebar { flex-direction: column; align-items: center; }
+            .sidebar .profile-pic { width: 100px; height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <img src="profile.jpg" alt="Tian Qiu Photo" class="profile-pic">
+            <div class="name">Tian Qiu (Mr.)</div>
+            <div class="affiliation">PhD Candidate, USYD</div>
+            <div class="location">Sydney, Australia</div>
+            <div class="contact">
+                qtautumn1994 at gmail dot com
+            </div>
+            <div class="links">
+                <a href="https://scholar.google.com.au/citations?user=gBDIgbsAAAAJ&hl=en&authuser=1&oi=ao" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" fill="#4285F4"/><path d="M24 13l-9 7h3v7h12v-7h3z" fill="#fff"/><rect x="19" y="27" width="10" height="2" fill="#fff"/></svg>
+                    Google Scholar
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#education">Educations</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#awards">Honors & Awards</a></li>
+                    <li><a href="#activities">Professional Activities</a></li>
+                    <li><a href="#mentoring">Mentoring</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#manuscripts">Manuscripts</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a PhD candidate in Computer Science at the University of Sydney, advised by Prof. Qiang Tang. Previously, I was a PhD candidate at the New Jersey Institute of Technology, also under Prof. Qiang Tang, and earned my MSc in Cybersecurity at the University of Chinese Academy of Sciences, advised by Prof. Dongdai Lin. My research focuses on privacy-preserving cryptography, especially zero-knowledge proofs and their applications in blockchain, including signature aggregation, private exchange, and private payment. I am passionate about advancing secure, private, and compliant blockchain solutions.
+                </p>
+            </section>
+            <section id="education">
+                <h2>Educations</h2>
+                <ul>
+                    <li><b>Jul. 2021 - Now</b>: PhD candidate in Computer Science, School of Computer Science, The University of Sydney<br>Advisor: Prof. Qiang Tang<br>Thesis: <i>Towards Private and Compliable Blockchain Applications</i></li>
+                    <li><b>Sep. 2019 - Jan. 2021</b>: PhD candidate in Computer Science, Ying Wu College of Computing, New Jersey Institute of Technology<br>Advisor: Prof. Qiang Tang</li>
+                    <li><b>Sep. 2016 - Jul. 2020</b>: Master of Science in Cybersecurity, Institute of Information Engineering, University of Chinese Academy of Sciences<br>Advisor: Prof. Dongdai Lin</li>
+                    <li><b>Sep. 2012 - Jul. 2016</b>: Bachelor of Science in Statistics, School of Mathematics and Statistics, Xidian University</li>
+                </ul>
+            </section>
+            <section id="publications">
+                <h2>Publications</h2>
+                <ol>
+                    <li>
+                        <span class="pub-title">Pisces: Private and Compliable Cryptocurrency Exchange</span><br>
+                        <span class="pub-authors">Ya-nan Li, <b>Tian Qiu*</b>, Qiang Tang.</span><br>
+                        <span class="pub-venue">NDSS 2024 - The Network and Distributed System Security Symposium (CORE rank A*)</span>
+                    </li>
+                    <li>
+                        <span class="pub-title">Predicate Aggregate Signatures and Applications</span><br>
+                        <span class="pub-authors"><b>Tian Qiu</b>, Qiang Tang.</span><br>
+                        <span class="pub-venue">AsiaCrypt 2023 - 29th Annual International Conference on the Theory and Application of Cryptology and Information Security (CORE rank A)</span>
+                    </li>
+                    <li>
+                        <span class="pub-title">Lattice HIBE with Faster Trapdoor Delegation and Applications</span><br>
+                        <span class="pub-authors">Guofeng Tang, <b>Tian Qiu</b>.</span><br>
+                        <span class="pub-venue">ICICS 2020 - 22th International Conference on Information and Communications Security</span>
+                    </li>
+                    <li>
+                        <span class="pub-title">A Multi-Group Signature Scheme from Lattices</span><br>
+                        <span class="pub-authors"><b>Tian Qiu</b>, Lin Hou, Dongdai Lin.</span><br>
+                        <span class="pub-venue">ICICS 2019 - 21th International Conference on Information and Communications Security</span>
+                    </li>
+                    <li>
+                        <span class="pub-title">Hierarchical Group Signatures with Verifier-Local Revocation</span><br>
+                        <span class="pub-authors">Lin Hou, Renzhang Liu, <b>Tian Qiu</b>, Dongdai Lin.</span><br>
+                        <span class="pub-venue">ICICS 2018 - 20th International Conference on Information and Communications Security</span>
+                    </li>
+                </ol>
+            </section>
+            <section id="awards">
+                <h2>Honors & Awards</h2>
+                <ul>
+                    <li>2021-2024 Faculty of Engineering Research Scholarship, USYD</li>
+                    <li>2019 Provost Doctoral Assistantship (the only awardee from YWCC), NJIT</li>
+                    <li>2016-2018 Postgraduate Academic Scholarship, University of Chinese Academy of Sciences</li>
+                    <li>Jun. 2016 Excellent Graduation Thesis (3-out-of-111), Xidian University</li>
+                    <li>2013-2015 University Scholarship, Xidian University</li>
+                </ul>
+            </section>
+            <section id="activities">
+                <h2>Professional Activities</h2>
+                <p>Conference reviewer for: S&amp;P 2025/2023, FC 2025, NDSS 2025/2024/2023, Crypto 2024, Usenix Security 2024/2023/2022, AsiaCrypt 2024/2023/2022/2021, PKC 2024/2022/2021, CCS 2023/2022, EuroCrypt 2023, ICDCS 2023/2022/2021, etc.</p>
+            </section>
+            <section id="mentoring">
+                <h2>Mentoring Experience</h2>
+                <ul>
+                    <li>Quanhao Chen (MPhil student, USYD)</li>
+                    <li>Kangyue Fu (Honours student, USYD)</li>
+                </ul>
+            </section>
+            <section id="teaching">
+                <h2>Teaching Experience</h2>
+                <ul>
+                    <li><b>Guest lecturer</b><br>
+                        Apr. 2024 Video Intelligence and Compression (ELEC 5306), USYD
+                    </li>
+                    <li><b>Teaching assistant</b><br>
+                        2023-2025 Applied Cryptography (CSEC 5619), USYD<br>
+                        2022-2024 Empirical Security Analysis and Engineering (COMP 5617), USYD<br>
+                        2022 Security and Usability (INFO 2222), USYD<br>
+                        2020 Introduction to Cybersecurity (CS 351), NJIT<br>
+                        2019-2020 Programming Language Concepts (CS 280), NJIT
+                    </li>
+                </ul>
+            </section>
+            <section id="manuscripts">
+                <h2>Manuscripts</h2>
+                <ul>
+                    <li><b>Even Small, Cannot Be Ignored: Fair Relay in Anonymous Zether</b><br>
+                        <span class="pub-authors">Tian Qiu, Qiang Tang, Sri AravindaKrishnan Thyagarajan.</span><br>
+                        <span class="pub-venue">In submission to PoPETs 2025.4.</span>
+                    </li>
+                    <li><b>Charon: Private Cryptocurrencies Trading in Dark Pool</b><br>
+                        <span class="pub-authors">Quanhao Chen, Yanan Li, Tian Qiu, Qiang Tang.</span><br>
+                        <span class="pub-venue">In submission to Usenix Security 2025 Cycle 2.</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html> 
