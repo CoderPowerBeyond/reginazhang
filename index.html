@@ -11,6 +11,39 @@
             background: #f7f9fa;
             color: #222;
         }
+        .topnav {
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 0 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .topnav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .topnav li {
+            margin: 0 18px;
+        }
+        .topnav a {
+            color: #2a5d9f;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            transition: color 0.2s;
+            padding: 18px 0;
+            display: block;
+        }
+        .topnav a:hover {
+            color: #17406a;
+        }
         .layout {
             display: flex;
             min-height: 100vh;
@@ -83,28 +116,6 @@
         .sidebar .links svg {
             margin-right: 7px;
         }
-        .sidebar nav {
-            margin-top: 30px;
-            width: 100%;
-        }
-        .sidebar nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar nav li {
-            margin: 12px 0;
-        }
-        .sidebar nav a {
-            color: #222;
-            text-decoration: none;
-            font-size: 1.08rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-        .sidebar nav a:hover {
-            color: #2a5d9f;
-        }
         .main-content {
             flex: 1;
             padding: 48px 36px 36px 36px;
@@ -130,23 +141,40 @@
         @media (max-width: 900px) {
             .layout { flex-direction: column; }
             .sidebar { width: 100%; max-width: none; min-width: 0; flex-direction: row; justify-content: flex-start; align-items: flex-start; padding: 18px 10px; }
-            .sidebar nav { margin-top: 10px; }
             .main-content { padding: 24px 8px; }
             .sidebar .profile-pic { width: 120px; height: 120px; }
+            .topnav ul { flex-wrap: wrap; }
         }
         @media (max-width: 600px) {
             .main-content { padding: 10px 2px; }
             .sidebar { flex-direction: column; align-items: center; }
             .sidebar .profile-pic { width: 100px; height: 100px; }
+            .topnav ul { flex-direction: column; align-items: center; }
+            .topnav li { margin: 0 0 8px 0; }
         }
     </style>
 </head>
 <body>
+    <nav class="topnav">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#interests">Research Interests</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#activities">Professional Activities</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#awards">Honors & Awards</a></li>
+            <li><a href="#manuscripts">Manuscripts</a></li>
+        </ul>
+    </nav>
     <div class="layout">
         <aside class="sidebar">
             <img src="profile.jpg" alt="Tian Qiu Photo" class="profile-pic">
-            <div class="name">Tian Qiu (Mr.)</div>
-            <div class="affiliation">PhD Candidate, USYD</div>
+            <div class="name">Tian Qiu</div>
+            <div class="status">Final Year PhD Candidate</div>
+            <div class="affiliation">
+                School of Computer Science<br>
+                The University of Sydney (USYD)
+            </div>
             <div class="location">Sydney, Australia</div>
             <div class="contact">
                 qtautumn1994 at gmail dot com
@@ -157,34 +185,19 @@
                     Google Scholar
                 </a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#education">Educations</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#awards">Honors & Awards</a></li>
-                    <li><a href="#activities">Professional Activities</a></li>
-                    <li><a href="#mentoring">Mentoring</a></li>
-                    <li><a href="#teaching">Teaching</a></li>
-                    <li><a href="#manuscripts">Manuscripts</a></li>
-                </ul>
-            </nav>
         </aside>
         <main class="main-content">
             <section id="about">
                 <h2>About Me</h2>
                 <p>
-                    I am a PhD candidate in Computer Science at the University of Sydney, advised by Prof. Qiang Tang. Previously, I was a PhD candidate at the New Jersey Institute of Technology, also under Prof. Qiang Tang, and earned my MSc in Cybersecurity at the University of Chinese Academy of Sciences, advised by Prof. Dongdai Lin. My research focuses on privacy-preserving cryptography, especially zero-knowledge proofs and their applications in blockchain, including signature aggregation, private exchange, and private payment. I am passionate about advancing secure, private, and compliant blockchain solutions.
+                    I am a final year PhD candidate in Computer Science at the University of Sydney, advised by Prof. Qiang Tang. Previously, I was a PhD candidate at the New Jersey Institute of Technology, also under Prof. Qiang Tang, and earned my MSc in Cybersecurity at the University of Chinese Academy of Sciences, advised by Prof. Dongdai Lin. I hold a BSc in Statistics from Xidian University. I am passionate about advancing secure, private, and compliant blockchain solutions.
                 </p>
             </section>
-            <section id="education">
-                <h2>Educations</h2>
-                <ul>
-                    <li><b>Jul. 2021 - Now</b>: PhD candidate in Computer Science, School of Computer Science, The University of Sydney<br>Advisor: Prof. Qiang Tang<br>Thesis: <i>Towards Private and Compliable Blockchain Applications</i></li>
-                    <li><b>Sep. 2019 - Jan. 2021</b>: PhD candidate in Computer Science, Ying Wu College of Computing, New Jersey Institute of Technology<br>Advisor: Prof. Qiang Tang</li>
-                    <li><b>Sep. 2016 - Jul. 2020</b>: Master of Science in Cybersecurity, Institute of Information Engineering, University of Chinese Academy of Sciences<br>Advisor: Prof. Dongdai Lin</li>
-                    <li><b>Sep. 2012 - Jul. 2016</b>: Bachelor of Science in Statistics, School of Mathematics and Statistics, Xidian University</li>
-                </ul>
+            <section id="interests">
+                <h2>Research Interests</h2>
+                <p>
+                    My research focuses on privacy-preserving cryptography, especially zero-knowledge proofs and their applications in blockchain, including signature aggregation, private exchange, and private payment.
+                </p>
             </section>
             <section id="publications">
                 <h2>Publications</h2>
@@ -192,49 +205,47 @@
                     <li>
                         <span class="pub-title">Pisces: Private and Compliable Cryptocurrency Exchange</span><br>
                         <span class="pub-authors">Ya-nan Li, <b>Tian Qiu*</b>, Qiang Tang.</span><br>
-                        <span class="pub-venue">NDSS 2024 - The Network and Distributed System Security Symposium (CORE rank A*)</span>
+                        <span class="pub-venue">NDSS 2024 - The Network and Distributed System Security Symposium (CORE rank A*)</span><br>
+                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=gBDIgbsAAAAJ&citation_for_view=gBDIgbsAAAAJ:u-x6o8ySG0sC" target="_blank">Google Scholar</a> |
+                        <a href="https://arxiv.org/pdf/2309.01667.pdf" target="_blank">PDF</a>
                     </li>
                     <li>
                         <span class="pub-title">Predicate Aggregate Signatures and Applications</span><br>
                         <span class="pub-authors"><b>Tian Qiu</b>, Qiang Tang.</span><br>
-                        <span class="pub-venue">AsiaCrypt 2023 - 29th Annual International Conference on the Theory and Application of Cryptology and Information Security (CORE rank A)</span>
+                        <span class="pub-venue">AsiaCrypt 2023 - 29th Annual International Conference on the Theory and Application of Cryptology and Information Security (CORE rank A)</span><br>
+                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=gBDIgbsAAAAJ&citation_for_view=gBDIgbsAAAAJ:d1gkVwhDpl0C" target="_blank">Google Scholar</a> |
+                        <a href="https://eprint.iacr.org/2023/1694.pdf" target="_blank">PDF</a>
                     </li>
                     <li>
                         <span class="pub-title">Lattice HIBE with Faster Trapdoor Delegation and Applications</span><br>
                         <span class="pub-authors">Guofeng Tang, <b>Tian Qiu</b>.</span><br>
-                        <span class="pub-venue">ICICS 2020 - 22th International Conference on Information and Communications Security</span>
+                        <span class="pub-venue">ICICS 2020 - 22th International Conference on Information and Communications Security</span><br>
+                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=gBDIgbsAAAAJ&citation_for_view=gBDIgbsAAAAJ:qjMakFHDy7sC" target="_blank">Google Scholar</a>
                     </li>
                     <li>
                         <span class="pub-title">A Multi-Group Signature Scheme from Lattices</span><br>
                         <span class="pub-authors"><b>Tian Qiu</b>, Lin Hou, Dongdai Lin.</span><br>
-                        <span class="pub-venue">ICICS 2019 - 21th International Conference on Information and Communications Security</span>
+                        <span class="pub-venue">ICICS 2019 - 21th International Conference on Information and Communications Security</span><br>
+                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=gBDIgbsAAAAJ&citation_for_view=gBDIgbsAAAAJ:IjCSPb-OGe4C" target="_blank">Google Scholar</a>
                     </li>
                     <li>
                         <span class="pub-title">Hierarchical Group Signatures with Verifier-Local Revocation</span><br>
                         <span class="pub-authors">Lin Hou, Renzhang Liu, <b>Tian Qiu</b>, Dongdai Lin.</span><br>
-                        <span class="pub-venue">ICICS 2018 - 20th International Conference on Information and Communications Security</span>
+                        <span class="pub-venue">ICICS 2018 - 20th International Conference on Information and Communications Security</span><br>
+                        <a href="https://scholar.google.com.au/citations?view_op=view_citation&hl=en&user=gBDIgbsAAAAJ&citation_for_view=gBDIgbsAAAAJ:UeHWp8X0CEIC" target="_blank">Google Scholar</a>
                     </li>
                 </ol>
             </section>
-            <section id="awards">
-                <h2>Honors & Awards</h2>
-                <ul>
-                    <li>2021-2024 Faculty of Engineering Research Scholarship, USYD</li>
-                    <li>2019 Provost Doctoral Assistantship (the only awardee from YWCC), NJIT</li>
-                    <li>2016-2018 Postgraduate Academic Scholarship, University of Chinese Academy of Sciences</li>
-                    <li>Jun. 2016 Excellent Graduation Thesis (3-out-of-111), Xidian University</li>
-                    <li>2013-2015 University Scholarship, Xidian University</li>
-                </ul>
-            </section>
             <section id="activities">
                 <h2>Professional Activities</h2>
-                <p>Conference reviewer for: S&amp;P 2025/2023, FC 2025, NDSS 2025/2024/2023, Crypto 2024, Usenix Security 2024/2023/2022, AsiaCrypt 2024/2023/2022/2021, PKC 2024/2022/2021, CCS 2023/2022, EuroCrypt 2023, ICDCS 2023/2022/2021, etc.</p>
-            </section>
-            <section id="mentoring">
-                <h2>Mentoring Experience</h2>
+                <b>Reviewer for</b>
                 <ul>
-                    <li>Quanhao Chen (MPhil student, USYD)</li>
-                    <li>Kangyue Fu (Honours student, USYD)</li>
+                    <li>2025: S&amp;P, FC, NDSS, CCS</li>
+                    <li>2024: NDSS, Usenix Security, AsiaCrypt, PKC, Crypto</li>
+                    <li>2023: NDSS, Usenix Security, AsiaCrypt, PKC, CCS, EuroCrypt, ICDCS, S&amp;P</li>
+                    <li>2022: Usenix Security, AsiaCrypt, PKC, CCS, ICDCS</li>
+                    <li>2021: AsiaCrypt, ICDCS, PKC</li>
+                    
                 </ul>
             </section>
             <section id="teaching">
@@ -250,6 +261,16 @@
                         2020 Introduction to Cybersecurity (CS 351), NJIT<br>
                         2019-2020 Programming Language Concepts (CS 280), NJIT
                     </li>
+                </ul>
+            </section>
+            <section id="awards">
+                <h2>Honors & Awards</h2>
+                <ul>
+                    <li>2021-2024 Faculty of Engineering Research Scholarship, USYD</li>
+                    <li>2019 Provost Doctoral Assistantship (the only awardee from YWCC), NJIT</li>
+                    <li>2016-2018 Postgraduate Academic Scholarship, University of Chinese Academy of Sciences</li>
+                    <li>Jun. 2016 Excellent Graduation Thesis (3-out-of-111), Xidian University</li>
+                    <li>2013-2015 University Scholarship, Xidian University</li>
                 </ul>
             </section>
             <section id="manuscripts">
