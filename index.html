@@ -59,15 +59,24 @@
             align-items: center;
             padding: 36px 18px 24px 18px;
         }
-        .sidebar .profile-pic {
+        /* .sidebar .profile-pic {
             width: 180px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #e3e7ea;
             margin-bottom: 18px;
+        } */
+        .sidebar .profile-pic {
+        width: 100%;
+        max-width: 180px;
+        height: auto;               /* 按原比例显示 */
+        border-radius: 8px;         /* 方形或圆角矩形，不裁切 */
+        object-fit: contain;        /* 显示整个照片，不裁切 */
+        border: 3px solid #e3e7ea;
+        margin-bottom: 18px;
         }
-        .sidebar .name {
+            .sidebar .name {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 6px;
