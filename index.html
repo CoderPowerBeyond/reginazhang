@@ -43,7 +43,11 @@ img,svg{display:block;max-width:100%}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:72px;align-items:start;padding:68px 0 48px}
 .hero h1{font:700 54px/1.04 var(--serif);color:var(--ink);letter-spacing:-1.2px}
 .appt{margin-top:16px;font:15px/1.7 var(--sans);color:var(--muted)}
-.appt strong{font-weight:600;color:var(--ink)}
+.appt{list-style:none;padding:0}
+.appt li{padding:3px 0}
+.appt li:first-child strong{color:var(--ink)}
+.appt strong{font-weight:600;color:var(--text);margin-right:8px}
+.appt span{color:var(--muted)}
 .thesis{margin-top:30px;max-width:36em;font-size:22px;line-height:1.55;color:var(--ink)}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;font-family:var(--sans)}
 .links a{font-size:13.5px;font-weight:500;padding:8px 15px;border:1px solid #c7d4d6;border-radius:3px;color:var(--deep)}
@@ -137,6 +141,7 @@ img,svg{display:block;max-width:100%}
   .hero-rest{grid-column:1/-1}
   .hero h1{font-size:36px}
   .appt{font-size:13.5px}
+  .appt span{display:block}
   .portrait img{width:92px;height:116px}
   .thesis{font-size:18.5px;margin-top:4px}
   .pub{grid-template-columns:1fr;gap:12px}
@@ -180,9 +185,11 @@ img,svg{display:block;max-width:100%}
   <div class="hero-main">
     <div class="hero-id">
       <h1 id="name">Regina Zhang</h1>
-      <p class="appt"><strong>Postdoctoral Associate, Yale University</strong><br>
-      Department of Radiology &amp; Biomedical Imaging, Yale School of Medicine<br>
-      Ph.D. in Computer Science, The University of Hong Kong</p>
+      <ul class="appt">
+        <li><strong>Postdoctoral Associate, Yale University</strong><span>Radiology &amp; Biomedical Imaging, with Jinsong Ouyang and Xiaofeng Liu</span></li>
+        <li><strong>Postdoctoral Researcher, University of Cambridge</strong><span>with Pietro Liò</span></li>
+        <li><strong>Ph.D. in Computer Science, The University of Hong Kong</strong><span>advised by Siu-Ming Yiu</span></li>
+      </ul>
     </div>
     <div class="hero-rest">
       <p class="thesis">I develop AI methods for data science and biomedical informatics, with a focus on learning from graphs and time series that are noisy, incomplete, and evolving. My current work designs algorithms to forecast how Alzheimer’s pathology progresses across the brain and to advance PET tracer research.</p>
@@ -239,12 +246,6 @@ img,svg{display:block;max-width:100%}
         <h3>Professional service</h3>
         <p>Reviewer for ICML, NeurIPS, ICLR, KDD, AAAI, The Web Conference, and IEEE TKDE.</p>
         <p>Session Chair, Time Series, SIAM International Conference on Data Mining (SDM), 2022.</p>
-      </div>
-      <div class="block">
-        <h3>Training</h3>
-        <p>Postdoctoral Associate, Yale University, with Jinsong Ouyang and Xiaofeng Liu.<br>
-        Postdoctoral Researcher, University of Cambridge, with Pietro Liò.<br>
-        Ph.D. in Computer Science, The University of Hong Kong, advised by Siu-Ming Yiu.</p>
       </div>
     </div>
     <div>
